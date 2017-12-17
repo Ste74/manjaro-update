@@ -10,7 +10,7 @@
     </key>
 
     <key type="i" name="check-interval">
-        <default>60</default>
+        <default>120</default>
         <summary>Interval between updates check (minutes)</summary>
         <description>Time to wait between two automatic checks</description>
         <range min="30" max="2000"/>
@@ -51,13 +51,13 @@
     </key>
 
     <key name="check-cmd" type="s">
-      <default>"/usr/bin/checkupdates"</default>
+      <default>"/usr/bin/update-check"</default>
       <summary>Command to run to check for updated packages.</summary>
       <description>Command to run to check for updated packages.</description>
     </key>
 
     <key name="update-cmd" type="s">
-      <default>"gnome-terminal -e 'sh -c  \"sudo pacman -Syu ; echo Done - Press enter to exit; read\" '"</default>
+      <default>"update-command" '"</default>
       <summary>Command to run to update packages.</summary>
       <description>Command to run to update packages.</description>
     </key>
@@ -82,7 +82,7 @@
     </key>
 
     <key name="package-manager" type="s">
-      <default>""</default>
+      <default>"pamac-manager"</default>
       <summary>Command to run to open package manager.</summary>
       <description></description>
     </key>
