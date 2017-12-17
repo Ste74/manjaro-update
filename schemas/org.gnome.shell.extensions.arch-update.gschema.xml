@@ -57,7 +57,7 @@
     </key>
 
     <key name="update-cmd" type="s">
-      <default>"update-command" '"</default>
+      <default>"update-command"</default>
       <summary>Command to run to update packages.</summary>
       <description>Command to run to update packages.</description>
     </key>
