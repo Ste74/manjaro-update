@@ -8,6 +8,14 @@ Update indicator for Manjaro Linux and GNOME Shell
 - Launcher for your favorite update command
 - Comes in English, French, Czech, German, Spanish, Brazilian Portuguese, Italian, Polish, Romanian, Arabic, Slovak, Chinese, Serbian, Norwegian Bokmal, Russian, Persian, Turkish languages. (Thanks translators !)
 
+## Changes
+
+### v4
+- Updated Slovak translation
+- Updated Italian translation
+- Fixed a JS Warning
+- Fixed a bug that crashes Gnome-SHELL on update
+
 ### v3.3
 - Sync with upstream repo: Update some language and modified code to prevent gnome-shell crash
 

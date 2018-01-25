@@ -84,14 +84,14 @@ const ArchUpdateIndicator = new Lang.Class({
 
 		this.updateIcon = new St.Icon({icon_name: "arch-unknown-symbolic", style_class: 'system-status-icon'});
 
-		this.box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
+		let box = new St.BoxLayout({ vertical: false, style_class: 'panel-status-menu-box' });
 		this.label = new St.Label({ text: '',
 			y_expand: true,
 			y_align: Clutter.ActorAlign.CENTER });
 
-		this.box.add_child(this.updateIcon);
-		this.box.add_child(this.label);
-		this.actor.add_child(this.box);
+		box.add_child(this.updateIcon);
+		box.add_child(this.label);
+		this.actor.add_child(box);
 
 		// Prepare the special menu : a submenu for updates list that will look like a regular menu item when disabled
 		// Scrollability will also be taken care of by the popupmenu
@@ -132,8 +132,6 @@ const ArchUpdateIndicator = new Lang.Class({
 		this.menu.addMenuItem(settingsMenuItem);
 
 		// Bind some events
-		this.connect('destroy', Lang.bind(this, this._onDestroy));
-		this.actor.connect('destroy', Lang.bind(this, this._onDestroy));
 		this.menu.connect('open-state-changed', Lang.bind(this, this._onMenuOpened));
 		this.checkNowMenuItem.connect('activate', Lang.bind(this, this._checkUpdates));
 		cancelButton.connect('clicked', Lang.bind(this, this._cancelCheck));
@@ -203,7 +201,12 @@ const ArchUpdateIndicator = new Lang.Class({
 		});
 	},
 
-	_onDestroy: function() {
+	destroy: function() {
+		if (this.monitor) {
+			// Stop spying on pacman local dir
+			this.monitor.cancel();
+			this.monitor = null;
+		}
 		if (this._updateProcess_sourceId) {
 			// We leave the checkupdate process end by itself but undef handles to avoid zombies
 			GLib.source_remove(this._updateProcess_sourceId);
@@ -218,6 +221,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			GLib.source_remove(this._TimeoutId);
 			this._TimeoutId = null;
 		}
+		this.parent();
 	},
 
 	_checkShowHide: function() {
@@ -231,15 +235,6 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.actor.visible = true;
 		}
 		this.label.visible = SHOW_COUNT;
-	},
-
-	_changeLabel: function(newText) {
-		this.box.remove_child(this.label);
-			this.label = new St.Label({ text: newText,
-				visible: SHOW_COUNT,
-				y_expand: true,
-				y_align: Clutter.ActorAlign.CENTER });
-		this.box.add_child(this.label);
 	},
 
 	_onMenuOpened: function() {
@@ -292,7 +287,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this.updateIcon.set_icon_name('arch-updates-symbolic');
 			this._updateMenuExpander( true, Gettext.ngettext( "%d update pending", "%d updates pending", updatesCount ).format(updatesCount) );
 			this.updatesListMenuLabel.set_text( this._updateList.join("\n") );
-			this._changeLabel(updatesCount.toString());
+			this.label.set_text(updatesCount.toString());
 			if (NOTIFY && UPDATES_PENDING < updatesCount) {
 				if (HOWMUCH > 0) {
 					let updateList = [];
@@ -320,7 +315,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			UPDATES_LIST = this._updateList;
 		} else {
 			this.updatesListMenuLabel.set_text("");
-			this._changeLabel("");
+			this.label.set_text('');
 			if (updatesCount == -1) {
 				// Unknown
 				this.updateIcon.set_icon_name('arch-unknown-symbolic');
