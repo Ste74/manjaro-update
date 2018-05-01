@@ -6,9 +6,10 @@
     "3.20",
     "3.22",
     "3.24",
-    "3.26"
+    "3.26",
+    "3.28"
   ], 
   "url": "https://github.com/Chrysostomus/arch-update", 
   "uuid": "manjaro-update@Chrysostomus", 
-  "version": 4
+  "version": 5
 }

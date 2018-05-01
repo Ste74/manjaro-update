@@ -10,6 +10,12 @@ Update indicator for Manjaro Linux and GNOME Shell
 
 ## Changes
 
+### v5
+- Gnome 3.28
+- New translation : Hebrew
+- Update translation : Spanish
+- Sync last upstream update 
+
 ### v4
 - Updated Slovak translation
 - Updated Italian translation
