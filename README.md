@@ -10,6 +10,11 @@ Update indicator for Manjaro Linux and GNOME Shell
 
 ## Changes
 
+### v6
+- Sync with arch-update [master](https://github.com/RaphaelRochet/arch-update/commit/30df8d9e32c29dda126d43b9a26230b1d292c245)
+- New translation : Estonian
+- Updated translation : Romanian
+
 ### v5
 - Gnome 3.28
 - New translation : Hebrew
