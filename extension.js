@@ -202,6 +202,12 @@ const ArchUpdateIndicator = new Lang.Class({
 	},
 
 	destroy: function() {
+		this._settings.disconnect( this._settingsChangedId );
+		if (this._notifSource) {
+			// Delete the notification source, which lay still have a notification shown
+			this._notifSource.destroy();
+			this._notifSource = null;
+		};
 		if (this.monitor) {
 			// Stop spying on pacman local dir
 			this.monitor.cancel();
@@ -373,7 +379,7 @@ const ArchUpdateIndicator = new Lang.Class({
 			this._updateProcess_pid = pid;
 		} catch (err) {
 			this._showChecking(false);
-			// TODO log err.message.toString() ?
+			this.lastUnknowErrorString = err.message.toString();
 			this._updateStatus(-2);
 		}
 	},

@@ -10,6 +10,15 @@ Update indicator for Manjaro Linux and GNOME Shell
 
 ## Changes
 
+### v7
+- Sync with arch-update [master](https://github.com/RaphaelRochet/arch-update/commit/319e9ab5e43c5acc63ca69163858f35635c273f7)
+- Gnome 3.30
+- New translation : Esperanto
+- New translation : Finnish
+- Updated translation : Brazilian
+- Fix indicator alignment
+- Fix some errors that could quickly fill log
+
 ### v6
 - Sync with arch-update [master](https://github.com/RaphaelRochet/arch-update/commit/30df8d9e32c29dda126d43b9a26230b1d292c245)
 - New translation : Estonian
