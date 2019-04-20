@@ -1,3 +1,5 @@
+# Now this extension is not necessary in Manjaro since we have merged into pamac the code.
+---
 # manjaro-update
 Update indicator for Manjaro Linux and GNOME Shell
 
