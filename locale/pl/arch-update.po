@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Artur "artur9010" Motyka <arturmotyka99@gmail.com>, 2016.
+# Piotr Komur <pkomur@gmail.com>, 2018
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 15:31+0200\n"
-"PO-Revision-Date: 2016-01-31 12:00+0100\n"
-"Last-Translator: Artur \"artur9010\" Motyka <arturmotyka99@gmail.com>\n"
+"PO-Revision-Date: 2018-09-01 11:11+0200\n"
+"Last-Translator: Piotr Komur <pkomur@gmail.com>\n"
 "Language-Team: polski <>\n"
-"Language: \n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: extension.js:104
 msgid "Settings"
@@ -41,7 +42,7 @@ msgstr "Sprawdź teraz"
 
 #: extension.js:147
 msgid "Waiting first check"
-msgstr "Oczekuje na pierwsze sprawdzenie"
+msgstr "Oczekuję na pierwsze sprawdzenie"
 
 #: extension.js:288
 #, fuzzy, javascript-format
@@ -78,9 +79,8 @@ msgid "Up to date :)"
 msgstr "Wszystko jest aktualne"
 
 #: prefs.xml:57
-#, fuzzy
 msgid "Checking for updates"
-msgstr "Polecenie służące do sprawdzania aktualizacji"
+msgstr "Sprawdzanie dostępności aktualizacji"
 
 #: prefs.xml:81
 msgid "Time to wait before first check (seconds)"
@@ -88,16 +88,15 @@ msgstr "Czas przed pierwszym sprawdzeniem (w sekundach)"
 
 #: prefs.xml:100
 msgid "Interval between updates check (minutes)"
-msgstr "Czas co jaki sprawdzać aktualizacje (w minutach)"
+msgstr "Czas, co jaki sprawdzać aktualizacje (w minutach)"
 
 #: prefs.xml:119
 msgid "Strip out versions numbers"
-msgstr ""
+msgstr "Nie pokazuj numerów wersji"
 
 #: prefs.xml:141
-#, fuzzy
 msgid "Indicator"
-msgstr "<b>Indykator</b>"
+msgstr "Indykator"
 
 #: prefs.xml:156
 msgid "Always visible"
@@ -112,15 +111,16 @@ msgid ""
 "Auto-expand updates list if updates count is less than this number (0 to "
 "disable)"
 msgstr ""
+"Automatycznie rozwijaj listę aktualizacji, jeżeli ich liczba jest większa "
+"niż (0 rozwijanie nieaktywne)"
 
 #: prefs.xml:218
-#, fuzzy
 msgid "Notification"
-msgstr "<b>Powiadomienia</b>"
+msgstr "Powiadomienia"
 
 #: prefs.xml:233
 msgid "Send a notification when new updates are available"
-msgstr "Wyświetl powiadomienie gdy nowe aktualizacje będą dostępne"
+msgstr "Wyświetl powiadomienie, gdy nowe aktualizacje będą dostępne"
 
 #: prefs.xml:252
 msgid "Use transient notifications (auto dismiss)"
@@ -136,14 +136,13 @@ msgstr "Tylko liczba"
 
 #: prefs.xml:280
 msgid "New updates names"
-msgstr "Nazwy nowych aktulalizacji"
+msgstr "Nazwy nowych aktualizacji"
 
 #: prefs.xml:281
 msgid "All updates names"
 msgstr "Nazwy wszystkich aktualizacji"
 
 #: prefs.xml:296
-#, fuzzy
 msgid "Basic settings"
 msgstr "Ustawienia"
 
@@ -157,17 +156,15 @@ msgstr "Polecenie służące do aktualizacji"
 
 #: prefs.xml:346
 msgid "Pacman local directory path - To detect when new packages are installed"
-msgstr "Lokacja pliku wykonalnego pacmana"
+msgstr "Lokalizacja katalogu lokalnego Pacmana"
 
 #: prefs.xml:363
-#, fuzzy
 msgid "Command to open package manager (optional)"
-msgstr "Polecenie służące do aktualizacji"
+msgstr "Polecenie uruchamiające menedżer pakietów (opcjonalnie)"
 
 #: prefs.xml:380
-#, fuzzy
 msgid "Advanced settings"
-msgstr "<b>Zaawansowane</b>"
+msgstr "Zaawansowane"
 
 #~ msgid "<b>Timers</b>"
 #~ msgstr "<b>Czasomierze</b>"
